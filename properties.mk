@@ -260,6 +260,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
+    media.stagefright.thumbnail.prefer_hw_codecs=true \
     persist.vendor.media.recorder.bt709=true
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
