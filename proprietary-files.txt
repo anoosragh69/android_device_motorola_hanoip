@@ -117,8 +117,8 @@ vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbluetooth_audio_session_qti_2_1.so
 
 # Bluetooth (aptX)
-lib64/libaptXHD_encoder.so
-lib64/libaptX_encoder.so
+system/lib64/libaptXHD_encoder.so
+system/lib64/libaptX_encoder.so
 
 # Camera
 vendor/lib64/camera/com.mot.eeprom.mot_gt24p64b_ov16a_eeprom.so
@@ -779,8 +779,8 @@ vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # Radio
-etc/permissions/privapp-permissions-qti.xml
-etc/sysconfig/qti_whitelist.xml
+system/etc/permissions/privapp-permissions-qti.xml
+system/etc/sysconfig/qti_whitelist.xml
 -product/app/uimgbaservice/uimgbaservice.apk
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 product/etc/permissions/UimGba.xml
@@ -1004,8 +1004,8 @@ vendor/radio/qcril_database/upgrade/9_version_qcrildb.sql
 system_ext/priv-app/ims/ims.apk|e48ddd5a44c66db54cac7718f0030fc5e13d4b4a
 
 # Radio - Moto Telephony Framework
-etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
-framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
+system/etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
+system/framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
 
 # Radio - IMS
 product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml
