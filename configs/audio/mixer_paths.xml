@@ -238,6 +238,15 @@
     <ctl name="MultiMedia8 Mixer AFE_PCM_TX" value="0" />
     <!-- audio record compress end-->
 
+    <path name="hph-highquality-mode">
+       <ctl name="RX_HPH_PWR_MODE" value="LOHIFI" />
+       <ctl name="RX HPH Mode" value="CLS_H_LOHIFI" />
+        </path>
+    <path name="hph-lowpower-mode">
+       <ctl name="RX_HPH_PWR_MODE" value="ULP" />
+       <ctl name="RX HPH Mode" value="CLS_H_ULP" />
+    </path>
+
     <!-- split a2dp -->
     <ctl name="BT SampleRate" value="KHZ_8" />
     <ctl name="AFE Input Channels" value="Zero" />
@@ -378,6 +387,8 @@
     <ctl name="IIR0 INP3 MUX" value="ZERO" />
 
     <!-- Codec controls end -->
+
+    <ctl name="RX_CDC_DMA_RX_0 Format" value="S24_LE" />
 
     <!-- These are audio route (FE to BE) specific mixer settings -->
     <path name="echo-reference">
