@@ -149,6 +149,9 @@ TARGET_RECOVERY_DEVICE_MODULES := init_hanoip
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
+# Lineage Health
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
+
 # Media
 TARGET_DISABLED_UBWC := true
 
