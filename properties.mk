@@ -244,9 +244,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # LMKd
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lmk.thrashing_limit=30 \
+    ro.lmk.thrashing_limit=200 \
     ro.lmk.swap_free_low_percentage=10 \
-    ro.lmk.psi_partial_stall_ms=200 \
+    ro.lmk.psi_partial_stall_ms=120 \
     ro.lmk.swap_util_max=100 \
     ro.lmk.threshold_decay=30 \
     ro.lmk.thrashing_limit_decay=50 \
