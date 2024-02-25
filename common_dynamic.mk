@@ -18,6 +18,7 @@
 AB_OTA_PARTITIONS += \
     product \
     system_ext \
+    vbmeta_system \
     vendor_boot
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
