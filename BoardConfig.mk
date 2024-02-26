@@ -19,7 +19,7 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 BOARD_VENDOR := motorola
 
-VENDOR_PATH := device/motorola/sm6150-common
+DEVICE_PATH := device/motorola/hanoip
 
 # Architecture
 TARGET_ARCH := arm64
@@ -53,7 +53,8 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/motorola/sm6150
+TARGET_KERNEL_SOURCE := kernel/motorola/hanoip
+TARGET_KERNEL_CONFIG := vendor/hanoip_defconfig
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     LLVM=1 \
     LLVM_IAS=1
@@ -91,6 +92,10 @@ TARGET_MODULE_ALIASES += \
     wsa881x_dlkm.ko:audio_wsa881x.ko \
     wsa_macro_dlkm.ko:audio_wsa_macro.ko
 
+# Kernel modules - Audio
+TARGET_MODULE_ALIASES += \
+    snd-soc-aw882xx.ko:snd_smartpa_aw882xx.ko
+
 # Kernel modules - WLAN
 TARGET_MODULE_ALIASES += \
     wlan.ko:qca_cld3_wlan.ko
@@ -118,7 +123,7 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(VENDOR_PATH)/bluetooth/include
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth/include
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
 # CNE and DPM
@@ -136,6 +141,7 @@ WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
 MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
+TARGET_SCREEN_DENSITY := 420
 TARGET_USES_DISPLAY_RENDER_INTENTS := true
 TARGET_USES_GRALLOC4 := true
 TARGET_USES_HWC2 := true
@@ -146,8 +152,8 @@ TARGET_ENABLE_MEDIADRM_64 := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := \
-    $(VENDOR_PATH)/config.fs \
-    $(VENDOR_PATH)/mot_aids.fs
+    $(LOCAL_PATH)/config.fs \
+    $(LOCAL_PATH)/mot_aids.fs
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
@@ -157,12 +163,12 @@ TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
 
 # HIDL
-DEVICE_MATRIX_FILE := $(VENDOR_PATH)/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(LOCAL_PATH)/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(VENDOR_PATH):libinit_sm6150
-TARGET_RECOVERY_DEVICE_MODULES := libinit_sm6150
+TARGET_INIT_VENDOR_LIB := //$(LOCAL_PATH):libinit_hanoip
+TARGET_RECOVERY_DEVICE_MODULES := libinit_hanoip
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
@@ -198,7 +204,7 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
@@ -209,8 +215,8 @@ VENDOR_SECURITY_PATCH := 2022-05-01
 # SELinux
 TARGET_SEPOLICY_DIR := msmsteppe
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/private
-BOARD_VENDOR_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/private
+BOARD_VENDOR_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/vendor
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := true

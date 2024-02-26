@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.power-service.sm6150.ext-libperfmgr"
+#define LOG_TAG "android.hardware.power-service.hanoip.ext-libperfmgr"
 
 #include "PowerExt.h"
 

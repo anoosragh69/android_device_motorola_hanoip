@@ -1,5 +1,5 @@
 #
-# Properties for sm6150
+# Properties for hanoip
 #
 
 # Audio
@@ -7,6 +7,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=2 \
     audio.deep_buffer.media=true \
     audio.offload.video=true \
+    persist.vendor.audio.calfile0=/vendor/etc/acdbdata/Bluetooth_cal.acdb \
+    persist.vendor.audio.calfile1=/vendor/etc/acdbdata/General_cal.acdb \
+    persist.vendor.audio.calfile2=/vendor/etc/acdbdata/Global_cal.acdb \
+    persist.vendor.audio.calfile3=/vendor/etc/acdbdata/Handset_cal.acdb \
+    persist.vendor.audio.calfile4=/vendor/etc/acdbdata/Hdmi_cal.acdb \
+    persist.vendor.audio.calfile5=/vendor/etc/acdbdata/Headset_cal.acdb \
+    persist.vendor.audio.calfile6=/vendor/etc/acdbdata/Speaker_cal.acdb \
+    persist.vendor.audio.calfile7=/vendor/etc/acdbdata/Codec_cal.acdb \
     persist.vendor.audio.dualmic.config=endfire \
     persist.vendor.audio.fluence.voicecall=false \
     persist.vendor.audio.fluence.voicecomm=false \
@@ -124,11 +132,17 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.camera.expose.aux=1
+    persist.vendor.camera.expose.aux=1 \
+    persist.vendor.camera.physical.num=4
 
 # Charger
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.charger.enable_suspend=true
+
+# Chipset
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.soc.manufacturer=QTI \
+    ro.soc.model=SM7150
 
 # CNE
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -141,7 +155,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Crypto
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.allow_encrypt_override=true \
-    ro.crypto.volume.filenames_mode=aes-256-cts
+    ro.crypto.dm_default_key.options_format.version=2 \
+    ro.crypto.volume.filenames_mode=aes-256-cts \
+    ro.crypto.volume.metadata.method=dm-default-key \
+    ro.crypto.volume.options=::v2
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -196,6 +213,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.sf.enable_hwc_vds=1
+
+# HDR
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.qcom.hdr.config=/system/vendor/etc/hdr_tm_config.xml
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -325,7 +346,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Sensor
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.vendor.sensors.enable.mag_filter=true
+    ro.vendor.sensors.mot_ltv=true \
+    persist.vendor.sensors.enable.mag_filter=true \
+    persist.vendor.sensors.hal_trigger_ssr=true \
+    persist.vendor.sensors.odl.adsp=true
 
 # Time
 PRODUCT_PROPERTY_OVERRIDES += \

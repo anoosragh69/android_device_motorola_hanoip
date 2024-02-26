@@ -14,11 +14,15 @@
 # limitations under the License.
 #
 
+PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_SHIPPING_API_LEVEL := 29
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/motorola/sm6150-common/sm6150-common-vendor.mk)
+$(call inherit-product, vendor/motorola/hanoip/hanoip-vendor.mk)
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -36,9 +40,13 @@ AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
+    product \
     system \
+    system_ext \
+    vbmeta \
+    vbmeta_system \
     vendor \
-    vbmeta
+    vendor_boot
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -49,14 +57,12 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
-ifeq ($(filter %_foles %_parker,$(TARGET_PRODUCT)),)
-$(call inherit-product, device/motorola/sm6150-common/common_dynamic.mk)
-
 PRODUCT_PACKAGES += \
     e2fsck_ramdisk \
     tune2fs_ramdisk \
     resize2fs_ramdisk
-endif
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 # Properties
 -include $(LOCAL_PATH)/properties.mk
@@ -125,12 +131,11 @@ PRODUCT_PACKAGES += \
     tinymix \
     libtinycompress
 
-ifeq ($(filter %_liber %_parker,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
-endif
-
-PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    $(LOCAL_PATH)/audio/audio_ext_spkr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_ext_spkr.conf \
+    $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
 
 PRODUCT_COPY_FILES += \
@@ -170,7 +175,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
     android.frameworks.displayservice@1.0.vendor
 
-# Common init scripts
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so
+
+# Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.class_main.sh \
@@ -179,9 +187,12 @@ PRODUCT_PACKAGES += \
     init.mmi.chipset.rc \
     init.mmi.rc \
     init.mmi.laser.sh \
+    init.mmi.overlay.rc \
     init.mmi.touch.sh \
     init.mmi.usb.rc \
     init.mmi.usb.sh \
+    init.oem.fingerprint.sh \
+    init.oem.fingerprint2.sh \
     init.oem.hw.sh \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
@@ -245,6 +256,14 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.vendor \
     com.motorola.hardware.biometric.fingerprint@1.0.vendor
 
+# Fstab
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+    
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # For config.fs
 PRODUCT_PACKAGES += \
     fs_config_files
@@ -287,6 +306,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
+# IDC
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/idc/uinput_nav.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput_nav.idc \
+    $(LOCAL_PATH)/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-fpc.idc
+
+# Keylayouts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/uinput_nav.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput_nav.kl \
+    $(LOCAL_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
@@ -301,6 +330,10 @@ PRODUCT_COPY_FILES += \
 # IRQ
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.hanoip
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -374,7 +407,10 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.sm6150-libperfmgr
+    android.hardware.power-service.hanoip-libperfmgr
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/perf/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # QCOM
 PRODUCT_COPY_FILES += \
@@ -436,6 +472,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-service.multihal \
     android.frameworks.sensorservice@1.0 \
     android.frameworks.sensorservice@1.0.vendor \
     libsensorndkbridge
