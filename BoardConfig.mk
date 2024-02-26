@@ -163,8 +163,8 @@ TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
 
 # HIDL
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_hanoip
@@ -173,7 +173,6 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_hanoip
 # Media
 TARGET_DISABLED_UBWC := true
 
-ifeq ($(PRODUCT_USE_DYNAMIC_PARTITIONS), true)
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
