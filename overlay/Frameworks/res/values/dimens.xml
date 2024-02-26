@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- The default height of the status bar used in {@link SystemBarUtils#getStatusBarHeight} to
+         calculate the status bar height. -->
+    <dimen name="status_bar_height_default">115.0px</dimen>
+
+    <!-- the padding of the rounded corner -->
+    <dimen name="rounded_corner_content_padding">8dp</dimen>
+
+    <!-- Height of the status bar in portrait.
+         Do not read this dimen directly. Use {@link SystemBarUtils#getStatusBarHeight} instead.
+         -->
+    <dimen name="status_bar_height_portrait">@dimen/status_bar_height_default</dimen>
+
+    <!-- Height of the status bar in landscape.
+         Do not read this dimen directly. Use {@link SystemBarUtils#getStatusBarHeight} instead.
+         -->
+    <dimen name="status_bar_height_landscape">24.0dip</dimen>
+
+    <!-- Radius of the software rounded corners. -->
+    <dimen name="rounded_corner_radius">103px</dimen>
+
+    <!-- Top adjustment for the software rounded corners since corners are not perfectly
+        round. This value is used when retrieving the "radius" of the rounded corner in cases
+        where the exact bezier curve cannot be retrieved. This value will be subtracted from
+        rounded_corner_radius to more accurately provide a "radius" for the rounded corners.-->
+    <dimen name="rounded_corner_radius_adjustment">19px</dimen>
+
+</resources>
