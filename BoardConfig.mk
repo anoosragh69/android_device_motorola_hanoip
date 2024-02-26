@@ -163,8 +163,8 @@ TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
 
 # HIDL
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_hanoip
@@ -182,7 +182,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Media
 TARGET_DISABLED_UBWC := true
 
-ifeq ($(PRODUCT_USE_DYNAMIC_PARTITIONS), true)
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -193,7 +192,6 @@ BOARD_SUPER_PARTITION_GROUPS := mot_dp_group
 BOARD_SUPER_PARTITION_SIZE := 9729736704
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
-endif
 
 # Disable sparse for ext/f2fs images
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
