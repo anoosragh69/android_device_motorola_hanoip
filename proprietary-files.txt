@@ -438,7 +438,6 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 # Fingerprint
 vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/com.fingerprints.extension@1.0.so
-vendor/lib64/com.motorola.hardware.biometric.fingerprint@1.0.so
 vendor/lib64/libfp_ext_svc2.so
 vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
