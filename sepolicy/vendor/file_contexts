@@ -48,10 +48,16 @@
 /sys/devices/virtual/input/input[0-9]+/offset	        u:object_r:vendor_sysfs_laser:s0
 /sys/devices/virtual/input/input[0-9]+/calibration_data	u:object_r:vendor_sysfs_laser:s0
 
+
 # Fingerprint
-/(mnt/vendor/persist|persist)/fps(/.*)?                 u:object_r:vendor_persist_fps_file:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-chipone                 u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/chipone_ident                                                                   u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/fpc_ident                                                                       u:object_r:vendor_hal_fingerprint_fpc_exec:s0
+/dev/chipone_fp                                                                                                u:object_r:fingerprint_device:s0
+/data/vendor/chipone(/.*)?                                                                                     u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/fpc(/.*)?                                                                                         u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/.fps(/.*)?                                                                                        u:object_r:fingerprint_vendor_data_file:s0
+/(mnt/vendor/persist|persist)/fps(/.*)?                                                                        u:object_r:vendor_persist_fps_file:s0
+
 # Thermal
 /dev/mmi_sys_temp                                       u:object_r:thermal_device:s0
