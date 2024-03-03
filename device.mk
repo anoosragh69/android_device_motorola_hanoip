@@ -34,7 +34,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigResHanoip \
     SettingsResHanoip \
     SystemUIResHanoip \
-    TelephonyResHanoip \
+    TelephonyResHanoip
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
