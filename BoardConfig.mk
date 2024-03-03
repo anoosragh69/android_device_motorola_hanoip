@@ -47,20 +47,38 @@ TARGET_USES_UEFI := true
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 loop.max_part=7 cgroup.memory=nokmem,nosocket reboot=panic_warm
+BOARD_KERNEL_CMDLINE := \
+    console=ttyMSM0,115200n8 \
+    androidboot.hardware=qcom \
+    androidboot.console=ttyMSM0 \
+    androidboot.memcg=1 \
+    lpm_levels.sleep_disabled=1 \
+    video=vfb:640x400,bpp=32,memsize=3072000 \
+    msm_rtb.filter=0x237 \
+    service_locator.enable=1 \
+    swiotlb=1 \
+    androidboot.usbcontroller=a600000.dwc3 \
+    earlycon=msm_geni_serial,0x880000 \
+    loop.max_part=7 \
+    printk.devkmsg=on \
+    firmware_class.path=/vendor/firmware_mnt/image 
+
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/motorola/hanoip
-TARGET_KERNEL_CONFIG := vendor/hanoip_defconfig
-TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    LLVM=1 \
-    LLVM_IAS=1
+TARGET_KERNEL_CONFIG := \
+    vendor/sdmsteppe-perf_defconfig \
+    vendor/ext_config/moto-sdmsteppe.config \
+    vendor/ext_config/moto-sdmmagpie-hanoip.config \
+    vendor/debugfs.config \
+    vendor/ext_config/lineage-moto-sdmsteppe.config
 
-# Kernel modules - Audio
-TARGET_MODULE_ALIASES += \
+# Kernel modules
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
+TARGET_MODULE_ALIASES := \
     adsp_loader_dlkm.ko:audio_adsp_loader.ko \
     apr_dlkm.ko:audio_apr.ko \
     bolero_cdc_dlkm.ko:audio_bolero_cdc.ko \
@@ -76,6 +94,7 @@ TARGET_MODULE_ALIASES += \
     q6_pdr_dlkm.ko:audio_q6_pdr.ko \
     rx_macro_dlkm.ko:audio_rx_macro.ko \
     snd_event_dlkm.ko:audio_snd_event.ko \
+    snd-soc-aw882xx.ko:snd_smartpa_aw882xx.ko \
     stub_dlkm.ko:audio_stub.ko \
     swr_ctrl_dlkm.ko:audio_swr_ctrl.ko \
     swr_dlkm.ko:audio_swr.ko \
@@ -89,16 +108,9 @@ TARGET_MODULE_ALIASES += \
     wcd_core_dlkm.ko:audio_wcd_core.ko \
     wcd_spi_dlkm.ko:audio_wcd_spi.ko \
     wglink_dlkm.ko:audio_wglink.ko \
+    wlan.ko:qca_cld3_wlan.ko \
     wsa881x_dlkm.ko:audio_wsa881x.ko \
     wsa_macro_dlkm.ko:audio_wsa_macro.ko
-
-# Kernel modules - Audio
-TARGET_MODULE_ALIASES += \
-    snd-soc-aw882xx.ko:snd_smartpa_aw882xx.ko
-
-# Kernel modules - WLAN
-TARGET_MODULE_ALIASES += \
-    wlan.ko:qca_cld3_wlan.ko
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
