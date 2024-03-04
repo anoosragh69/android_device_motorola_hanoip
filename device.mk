@@ -346,6 +346,9 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm \
     vendor.lineage.livedisplay@2.0-service-sysfs.motorola_hanoip
 
+# Kernel
+PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.hanoip
