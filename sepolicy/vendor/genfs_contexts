@@ -41,6 +41,9 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.q
 genfscon sysfs /devices/platform/soc/soc:fpc_fpc1020/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/888000.i2c/i2c-0/0-0028/wakeup u:object_r:sysfs_wakeup:s0
 
+# Lights
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d000/leds/charging               u:object_r:sysfs_leds:s0
+
 # VL53L1
 genfscon sysfs /devices/virtual/laser/stmvl53l1                                 u:object_r:vendor_sysfs_laser:s0
 genfscon sysfs /module/stmvl53l1                                                u:object_r:vendor_sysfs_laser:s0
