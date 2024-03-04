@@ -77,11 +77,6 @@ on late-fs
     # Boot time fs tune
     write /sys/block/dm-9/queue/read_ahead_kb 2048
 
-service sec_nvm /vendor/bin/sec_nvm
-    class core
-    user system
-    group system
-
 on post-fs-data
     mkdir /data/tombstones 0771 system system
     mkdir /tombstones/modem 0771 system system
@@ -176,10 +171,6 @@ on charger
 #on property:persist.usb.chgdisabled=0
 #    write /sys/class/power_supply/battery/charging_enabled 1
 
-service spdaemon /vendor/bin/spdaemon
-    class core
-    user system
-    group system
 
 #service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
 #   user system
@@ -381,21 +372,10 @@ service hbtp /system/vendor/bin/hbtp_daemon
      group system
      disabled
 
-service qfp-daemon /vendor/bin/qfp-daemon
-    class late_start
-    user system
-    group system drmrpc diag input
-
 service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
    class main
    user root
    group system wakelock
-
-service energy-awareness /system/vendor/bin/energy-awareness
-    class main
-    user system
-    group system
-    oneshot
 
 service dcvs-sh /vendor/bin/init.qti.dcvs.sh
     class late_start
