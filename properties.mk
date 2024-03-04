@@ -232,6 +232,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.incremental.enable=1
 
+# Logs
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.log.tag.OpenGLRenderer=S
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
