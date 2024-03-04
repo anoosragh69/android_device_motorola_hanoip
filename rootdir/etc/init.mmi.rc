@@ -186,12 +186,6 @@ on post-fs-data
     chown oem_5001 oem_5001 /sys/class/power_supply/wireless/voltage_now
     chown oem_5001 oem_5001 /sys/class/power_supply/wireless/voltage_max
     chmod 0664 /sys/class/power_supply/wireless/voltage_max
-    chown oem_5001 oem_5001 /sys/kernel/debug/pmic-votable/CHG_DISABLE/force_val
-    chmod 0664 /sys/kernel/debug/pmic-votable/CHG_DISABLE/force_val
-    chown oem_5001 oem_5001 /sys/kernel/debug/pmic-votable/CHG_DISABLE/force_active
-    chmod 0664 /sys/kernel/debug/pmic-votable/CHG_DISABLE/force_active
-    chown oem_5001 oem_5001 /sys/kernel/debug/regulator/smb5-vconn/enable
-    chmod 0664 /sys/kernel/debug/regulator/smb5-vconn/enable
 
     chown root oem_5020 /sys/module/qpnp_smbcharger_mmi/parameters/eb_rechrg_start_soc
     chown root oem_5020 /sys/module/qpnp_smbcharger_mmi/parameters/eb_rechrg_stop_soc
