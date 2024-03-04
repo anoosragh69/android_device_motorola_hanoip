@@ -1,5 +1,7 @@
 # Radio
-vendor.ril.                u:object_r:vendor_radio_prop:s0
+vendor.ril.                                     u:object_r:vendor_radio_prop:s0
+ro.vendor.ril.svlte1x                           u:object_r:vendor_radio_prop:s0
+ro.vendor.ril.svdo                              u:object_r:vendor_radio_prop:s0
 
 # USB
 vendor.rmnet_vnd.rps_mask  u:object_r:vendor_usb_prop:s0
