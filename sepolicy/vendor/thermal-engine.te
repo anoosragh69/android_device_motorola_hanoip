@@ -5,3 +5,6 @@ allow vendor_thermal-engine { proc_stat proc_loadavg }:file r_file_perms;
 allow vendor_thermal-engine thermal_device:chr_file { rw_file_perms ioctl };
 allow vendor_thermal-engine sysfs_hwmon:dir r_dir_perms;
 allow vendor_thermal-engine sysfs_hwmon:file rw_file_perms;
+
+set_prop(vendor_thermal-engine, vendor_thermal_prop);
+r_dir_file(vendor_thermal-engine, sysfs_thermal)
