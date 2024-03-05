@@ -180,8 +180,8 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_hanoip
-TARGET_RECOVERY_DEVICE_MODULES := libinit_hanoip
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_hanoip
+TARGET_RECOVERY_DEVICE_MODULES := init_hanoip
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
