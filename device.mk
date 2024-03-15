@@ -32,6 +32,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     FrameworksResHanoip \
     CarrierConfigResHanoip \
+    NotchBarKiller \
     SettingsResHanoip \
     SystemUIResHanoip \
     TelephonyResHanoip
