@@ -5,6 +5,9 @@
 -->
 <resources>
 
+    <!-- UI -->
+    <string name="config_mainBuiltInDisplayCutout">M -35, 30 L -35, 103 L 35, 103 L 35, 30 Z</string>
+
     <!-- The default height of the status bar used in {@link SystemBarUtils#getStatusBarHeight} to
          calculate the status bar height. -->
     <dimen name="status_bar_height_default">115.0px</dimen>
