@@ -180,6 +180,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
     android.frameworks.displayservice@1.0.vendor
 
+# CameraGo
+PRODUCT_PACKAGES += \
+    CameraGo
+
 # ConfigStore
 PRODUCT_PACKAGES += \
     disable_configstore
