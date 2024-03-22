@@ -232,9 +232,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_NO_RECOVERY := true
 
-# Move recovery resources to vendor_boot
-BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
-
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
