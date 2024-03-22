@@ -793,22 +793,20 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # Radio
 etc/permissions/privapp-permissions-qti.xml
+-product/app/uimgbaservice/uimgbaservice.apk
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 product/etc/permissions/UimGba.xml
 product/etc/permissions/UimGbaManager.xml
--product/app/uimgbaservice/uimgbaservice.apk
 product/framework/uimgbalibrary.jar
 product/framework/uimgbamanagerlibrary.jar
 -system_ext/app/embms/embms.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
--system_ext/framework/embmslibrary.jar
--system_ext/framework/qcrilhook.jar
--system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 system_ext/etc/permissions/embms.xml
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
-system_ext/framework/embmslibrary.jar
-system_ext/framework/qcrilhook.jar
+-system_ext/framework/embmslibrary.jar
+-system_ext/framework/qcrilhook.jar
+-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 system_ext/lib/vendor.qti.hardware.radio.am@1.0.so
 system_ext/lib/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so
 system_ext/lib/vendor.qti.hardware.radio.lpa@1.0.so
