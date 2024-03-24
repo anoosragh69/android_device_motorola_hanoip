@@ -18,9 +18,6 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/motorola/hanoip/hanoip-vendor.mk)
 
