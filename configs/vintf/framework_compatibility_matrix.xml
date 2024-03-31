@@ -1,4 +1,11 @@
 <compatibility-matrix version="1.0" type="framework">
+    <hal format="aidl" optional="true">
+        <name>android.hardware.bluetooth</name>
+        <interface>
+            <name>IBluetoothHci</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.bluetooth.audio</name>
         <version>3.0</version>
@@ -23,12 +30,26 @@
             <instance>clearkey</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.gatekeeper</name>
+        <interface>
+            <name>IGatekeeper</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.gnss</name>
         <version>1.0</version>
         <interface>
             <name>IGnss</name>
             <instance>gnss_vendor</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.health</name>
+        <interface>
+            <name>IHealth</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -39,12 +60,89 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.power.stats</name>
+        <interface>
+            <name>IPowerStats</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.radio</name>
         <version>1.0-2</version>
         <interface>
             <name>ISap</name>
             <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.radio.config</name>
+        <interface>
+            <name>IRadioConfig</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.radio.data</name>
+        <interface>
+            <name>IRadioData</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.radio.ims</name>
+        <interface>
+            <name>IRadioIms</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.radio.messaging</name>
+        <interface>
+            <name>IRadioMessaging</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.radio.modem</name>
+        <interface>
+            <name>IRadioModem</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.radio.network</name>
+        <interface>
+            <name>IRadioNetwork</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.radio.sim</name>
+        <interface>
+            <name>IRadioSim</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.radio.voice</name>
+        <interface>
+            <name>IRadioVoice</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+    <name>android.hardware.sensors</name>
+        <interface>
+            <name>ISensors</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
