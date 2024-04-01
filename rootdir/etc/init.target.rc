@@ -155,6 +155,11 @@ on property:init.svc.vendor.per_mgr=running
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
 
+on property:persist.vendor.hvdcp_opti.start=1
+    chown root system /sys/class/power_supply/bms/soh
+    chown root system /sys/class/power_supply/bms/esr_actual
+    chown root system /sys/class/power_supply/bms/esr_nominal
+
 on charger
     start vendor.hvdcp_opti
     setprop sys.usb.controller a600000.dwc3
