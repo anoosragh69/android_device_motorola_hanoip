@@ -73,6 +73,9 @@ TARGET_KERNEL_CONFIG := \
     vendor/ext_config/moto-sdmmagpie-hanoip.config \
     vendor/debugfs.config \
     vendor/ext_config/lineage-moto-sdmsteppe.config
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    LLVM=1 \
+    LLVM_IAS=1
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
