@@ -182,6 +182,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CameraGo
 
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so
+
 # ConfigStore
 PRODUCT_PACKAGES += \
     disable_configstore
@@ -453,6 +456,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-full.so \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full.so 
 
 # QMI
 PRODUCT_PACKAGES += \
