@@ -75,7 +75,6 @@ TARGET_KERNEL_CONFIG := \
     vendor/ext_config/lineage-moto-sdmsteppe.config
 
 # Kernel modules
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
 TARGET_MODULE_ALIASES := \
     adsp_loader_dlkm.ko:audio_adsp_loader.ko \
     apr_dlkm.ko:audio_apr.ko \
