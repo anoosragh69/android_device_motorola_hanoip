@@ -72,7 +72,7 @@ TARGET_KERNEL_CONFIG := \
     vendor/ext_config/moto-sdmsteppe.config \
     vendor/ext_config/moto-sdmmagpie-hanoip.config \
     vendor/debugfs.config \
-    vendor/ext_config/lineage-moto-sdmsteppe.config
+    vendor/ext_config/hanoip-moto-sdmsteppe.config
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     LLVM=1 \
     LLVM_IAS=1
