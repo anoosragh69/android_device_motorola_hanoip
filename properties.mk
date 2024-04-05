@@ -162,7 +162,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.volume.metadata.method=dm-default-key \
     ro.crypto.volume.options=::v2
 
-
 # Configure hwui renderer and renderengine backend
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.hwui.use_vulkan=true \
@@ -297,7 +296,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.vendorprefix=/vendor \
-    ro.vendor.radio.imei.sv=11 \
+    ro.vendor.radio.imei.sv=22 \
     persist.vendor.data.iwlan.enable=true \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.data_con_rprt=1 \
@@ -318,7 +317,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.sw_mbn_update=0 \
     persist.vendor.radio.sar_sensor=1 \
     persist.vendor.radio.fi_supported=0 \
-    persist.vendor.radio.rat_on=other \
+    persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.hidl_dev_service=1 \
     persist.vendor.lte.pco_supported=true \
     persist.vendor.radio.enableadvancedscan=true \
@@ -336,9 +335,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.fflag.override.settings_provider_model=false \
     persist.vendor.data.mode=concurrent \
     ril.subscription.types=NV,RUIM \
-    ro.telephony.default_network=10,10 \
+    ro.telephony.default_network=33,33 \
     ro.vendor.use_data_netmgrd=true \
-    telephony.lteOnCdmaDevice=1,1
+    telephony.lteOnCdmaDevice=1
 
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
