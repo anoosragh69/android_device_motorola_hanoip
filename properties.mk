@@ -270,6 +270,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.netflix.bsp_rev=Q6150-17263-1
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.ssr.restart_level=ALL_ENABLE \
+    vendor.build.customerid=retail \
+    ro.vendor.mot.factory=false
+
 # NFC
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.nfc.port=I2C

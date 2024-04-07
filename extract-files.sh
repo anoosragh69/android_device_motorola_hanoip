@@ -62,6 +62,15 @@ function blob_fixup() {
     system_ext/etc/permissions/moto-telephony.xml)
         sed -i "s|system|system/system_ext|" "${2}"
         ;;
+    vendor/bin/thermal-engine)
+        sed -i 's/ro.mot.build.customerid/vendor.build.customerid/g' "${2}"
+        ;;
+    vendor/bin/rmt_storage)
+        sed -i 's/ro.mot.build.customerid/vendor.build.customerid/g' "${2}"
+        ;;
+    vendor/lib64/libril-qc-hal-qmi.so)
+        sed -i 's/ro.mot.build.customerid/vendor.build.customerid/g' "${2}"
+        ;;
     esac
 }
 
