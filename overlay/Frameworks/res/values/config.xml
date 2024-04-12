@@ -628,4 +628,7 @@
     <!-- Doze: does this device support STATE_DOZE?  -->
     <bool name="doze_display_state_supported">true</bool>
 
+    <!-- Fingerprint from stock ROM -->
+    <string name="config_stockFingerprint" translatable="false">motorola/hanoip_retail/hanoip:11/S2RI32.32-20-9-9-2/1591b:user/release-keys</string>
+
 </resources>
