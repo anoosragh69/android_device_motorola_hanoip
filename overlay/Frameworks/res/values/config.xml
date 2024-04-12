@@ -576,4 +576,7 @@
      <!-- Whether the new Auto Selection Network UI should be shown -->
      <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
 
+    <!-- Fingerprint from stock ROM -->
+    <string name="config_stockFingerprint" translatable="false">motorola/hanoip_retail/hanoip:11/S2RI32.32-20-9-9-2/1591b:user/release-keys</string>
+
 </resources>
