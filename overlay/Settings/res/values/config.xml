@@ -13,4 +13,7 @@
     -->
     <integer name="config_fingerprintSensorLocation">0</integer>
 
+    <!-- Show battery cycle count -->
+    <bool name="config_show_battery_cycle_count" translatable="false">true</bool>
+
 </resources>
