@@ -73,9 +73,6 @@ TARGET_KERNEL_CONFIG := \
     vendor/ext_config/moto-sdmmagpie-hanoip.config \
     vendor/debugfs.config \
     vendor/ext_config/hanoip-moto-sdmsteppe.config
-TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    LLVM=1 \
-    LLVM_IAS=1
 
 # Kernel modules
 TARGET_MODULE_ALIASES := \
@@ -264,6 +261,3 @@ WIFI_DRIVER_DEFAULT := qca_cld3
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-
-# Inherit from the proprietary version
-include vendor/motorola/hanoip-firmware/BoardConfigVendor.mk
