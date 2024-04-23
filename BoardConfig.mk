@@ -67,7 +67,7 @@ BOARD_RAMDISK_USE_LZ4 := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/motorola/hanoip
-TARGET_KERNEL_CONFIG := \
+KERNEL_DEFCONFIG := \
     vendor/sdmsteppe-perf_defconfig \
     vendor/ext_config/moto-sdmsteppe.config \
     vendor/ext_config/moto-sdmmagpie-hanoip.config \
