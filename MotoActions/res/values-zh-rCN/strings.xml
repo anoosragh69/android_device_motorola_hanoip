@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013-2016 The CyanogenMod Project
+               (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Title and summary -->
+    <string name="moto_actions_title">Moto 操作</string>
+
+    <!-- Device gestures -->
+    <string name="device_gestures_title">设备手势</string>
+    <string name="device_gestures_summary">管理设备手势</string>
+
+    <!-- Ambient display gestures -->
+    <string name="ambient_display_manage_summary">管理息屏显示手势</string>
+
+    <!-- Fingerprint gestures -->
+    <string name="fingerprint_gestures_title">指纹手势</string>
+    <string name="fingerprint_gestures_summary">使用指纹手势</string>
+    <string name="fingerprint_gestures_manage_summary">管理指纹手势</string>
+    <string name="fingerprint_actions_screenon">屏幕开启时操作</string>
+    <string name="fingerprint_tap_title">单击</string>
+    <string name="fingerprint_tap_dlg_title">选择单击操作</string>
+    <string name="fingerprint_double_tap_title">双击</string>
+    <string name="fingerprint_double_tap_dlg_title">选择双击操作</string>
+    <string name="fingerprint_long_tap_title">长按</string>
+    <string name="fingerprint_long_tap_dlg_title">选择长按操作</string>
+    <string name="fingerprint_swipe_up_title">上滑</string>
+    <string name="fingerprint_swipe_up_dlg_title">选择上滑操作</string>
+    <string name="fingerprint_swipe_down_title">下滑</string>
+    <string name="fingerprint_swipe_down_dlg_title">选择下滑操作</string>
+    <string name="fingerprint_swipe_left_title">左滑</string>
+    <string name="fingerprint_swipe_left_dlg_title">选择左滑操作</string>
+    <string name="fingerprint_swipe_right_title">右滑</string>
+    <string name="fingerprint_swipe_right_dlg_title">选择右滑操作</string>
+
+    <!-- Fingerprint gestures screen off -->
+    <string name="fingerprint_gestures_screenoff_title">屏幕关闭时使用指纹手势</string>
+    <string name="fingerprint_gestures_screenoff_summary">屏幕关闭时使用指纹手势。\n\n必须关闭指纹解锁才能使用此功能。</string>
+    <string name="fingerprint_actions_screenoff">屏幕关闭时的操作</string>
+
+   <!-- Power touch -->
+   <string name="power_touch_title">电源键触控</string>
+   <string name="power_touch_summary">双击电源键可使用的快捷方式</string>
+
+   <!-- Screen off gestures haptic feedback -->
+   <string name="haptic_feedback">振动</string>
+   <string name="haptic_feedback_summary">检测到触摸屏手势时振动</string>
+
+   <!-- Pip -->
+   <string name="app_does_not_support_pip">应用不支持画中画模式。</string>
+
+   <!-- Proximity sensor -->
+   <string name="allow_proximity_sensor_title">允许使用距离传感器</string>
+   <string name="allow_proximity_sensor_summary">在执行操作之前检查距离传感器</string>
+
+   <!-- DeviceSettings Import -->
+   <string name="switch_bar_on">开</string>
+   <string name="switch_bar_off">关</string>
+
+   <!-- Device actions -->
+    <string name="actions_title">操作</string>
+    <string name="action_none">无</string>
+    <string name="action_home">返回主屏幕</string>
+    <string name="action_power">屏幕开启/关闭</string>
+    <string name="action_wake">唤醒屏幕</string>
+    <string name="action_back">返回</string>
+    <string name="action_recents">最近应用</string>
+    <string name="action_last_app">上一应用</string>
+    <string name="action_volume_up">增加音量</string>
+    <string name="action_volume_down">减小音量</string>
+    <string name="action_voice_assistant">语音助手</string>
+    <string name="action_play_pause">播放/暂停</string>
+    <string name="action_previous_track">上一首曲目</string>
+    <string name="action_next_track">下一首曲目</string>
+    <string name="action_flashlight">手电筒开/关</string>
+    <string name="action_camera">打开相机</string>
+    <string name="action_screenshot">屏幕截图</string>
+    <string name="action_browser">打开浏览器</string>
+    <string name="action_dialer">打开电话应用</string>
+    <string name="action_email">打开邮件应用</string>
+    <string name="action_messages">打开信息应用</string>
+    <string name="action_pip">画中画模式</string>
+
+    <!-- Chop-chop gesture -->
+    <string name="chop_chop_gesture_title">快速打开手电筒</string>
+    <string name="chop_chop_gesture_summary">切动两次可打开/关闭手电筒</string>
+
+    <!-- Hand wave silencer gesture -->
+    <string name="hand_wave_silencer_title">挥手静音</string>
+    <string name="hand_wave_silencer_summary">在屏幕上挥手可使来电静音</string>
+
+    <!-- Flip to mute gesture -->
+    <string name="flip_to_mute_title">翻转开启勿扰功能</string>
+    <string name="flip_to_mute_summary">翻转手机可开启勿扰模式</string>
+
+    <!-- Do Not Disturb access -->
+    <string name="dnd_access">请授予“请勿打扰”访问权限，以便使用此功能。</string>
+
+    <!-- Lift to silence gesture -->
+    <string name="lift_to_silence_title">拿起手机即可静音</string>
+    <string name="lift_to_silence_summary">拿起手机使铃声静音。仅当您的设备放在平坦的表面上时有效。</string>
+
+    <!-- Hand wave gesture -->
+    <string name="hand_wave_gesture_title">挥手</string>
+    <string name="hand_wave_gesture_summary">挥手时显示息屏通知</string>
+    <string name="hand_wave_gesture_flat_title">方向检测</string>
+    <string name="hand_wave_gesture_flat_summary">仅当手机面朝上且放在平坦的表面上时才会显示息屏通知</string>
+
+    <!-- Pick-up gesture -->
+    <string name="pick_up_gesture_title">拿起</string>
+    <string name="pick_up_gesture_summary">拿起手机时显示息屏通知</string>
+
+    <!-- Pocket gesture -->
+    <string name="pocket_gesture_title">取出口袋</string>
+    <string name="pocket_gesture_summary">从口袋中拿出时显示息屏通知</string>
+
+    <!-- Proximity wake -->
+    <string name="proximity_wake_title">挥手</string>
+    <string name="proximity_wake_enable_title">挥手亮屏</string>
+    <string name="proximity_wake_enable_summary">挥手时唤醒设备</string>
+
+    <!-- Ambient Display -->
+    <string name="ambient_display_title">息屏显示</string>
+    <string name="ambient_display_enable_title">息屏显示</string>
+    <string name="ambient_display_enable_summary">接收到通知时唤醒屏幕</string>
+    <string name="ambient_display_gestures_title">息屏显示手势</string>
+    <string name="ambient_display_gestures_summary">唤醒屏幕的额外手势</string>
+    <string name="ambient_display_summary">当接收到通知时唤醒屏幕</string>
+    <string name="ambient_display_summary_on">当收到通知时屏幕会唤醒</string>
+    <string name="ambient_display_summary_off">当收到通知时屏幕不会唤醒</string>
+
+    <string name="tile_refresh_rate">屏幕刷新率</string>
+
+    <string name="assistant_button_action">助手键自定义操作</string>
+
+    <!-- Stylus -->
+    <string name="stylus_title">手写笔设置</string>
+</resources>
