@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2013 The OmniROM Project
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 2 of the License, or
+  (at your option) any later version.
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- wether device has a dedicated assistant key -->
+    <bool name="config_device_support_assistant_key">true</bool>
+
+    <!-- wether device has support for longpress fingerprint gesture -->
+    <bool name="config_device_support_fingerprint_gestures">false</bool>
+
+    <!-- wether device has support for swipe up/down fingerprint gestures -->
+    <bool name="config_device_support_swipe_updown_gesture">true</bool>
+
+    <!-- wether device has support for swipe left/right fingerprint gestures -->
+    <bool name="config_device_support_swipe_leftright_gesture">false</bool>
+
+    <!-- wether device has support for double tap fingerprint gesture -->
+    <bool name="config_device_support_doubletap_gesture">true</bool>
+
+    <!-- wether device has support for longpress fingerprint gesture -->
+    <bool name="config_device_support_longpress_gesture">false</bool>
+
+</resources>
