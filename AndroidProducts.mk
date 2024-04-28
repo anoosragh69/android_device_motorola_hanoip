@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_hanoip.mk
+    $(LOCAL_DIR)/aospa_hanoip.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_hanoip-eng \
-    lineage_hanoip-user \
-    lineage_hanoip-userdebug
+    aospa_hanoip-eng \
+    aospa_hanoip-user \
+    aospa_hanoip-userdebug
