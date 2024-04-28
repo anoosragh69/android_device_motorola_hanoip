@@ -2,6 +2,14 @@
 # Properties for hanoip
 #
 
+# ADB [TEMP]
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.adb.secure=0 \
+    service.adb.root=1 \
+    ro.secure=0 \
+    ro.debuggable=1 \
+    persist.sys.usb.config=mtp,adb
+
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=2 \
