@@ -199,6 +199,11 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
+# Power
+TARGET_USES_INTERACTION_BOOST := true
+TARGET_POWERHAL_BOOST_EXT := $(DEVICE_PATH)/configs/power/boost-ext.cpp
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/configs/power/mode-ext.cpp
+
 # Disable sparse for ext/f2fs images
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 TARGET_USERIMAGES_SPARSE_F2FS_DISABLED := true
