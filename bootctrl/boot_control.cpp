@@ -469,8 +469,7 @@ static int boot_ctl_set_active_slot_for_partitions(vector<string> part_list,
 			memcpy((void*)inactive_guid, (const void*)pentryA,
 					TYPE_GUID_SIZE);
 		} else {
-			ALOGE("Both A & B for %s are inactive..Aborting",
-					prefix.c_str());
+			ALOGE("Both A & B are inactive..Aborting");
 			goto error;
 		}
 		if (!strncmp(slot_suffix_arr[slot], AB_SLOT_A_SUFFIX,
@@ -558,14 +557,8 @@ int set_active_boot_slot(struct boot_control_module *module, unsigned slot)
 	//actual names. To do this we append the slot suffix to every member
 	//in the list.
 	for (i = 0; i < ARRAY_SIZE(ptn_list); i++) {
-		//XBL & XBL_CFG are handled differrently for ufs devices so
-		//ignore them
-		if (is_ufs && (!strncmp(ptn_list[i],
-						PTN_XBL,
-						strlen(PTN_XBL))
-					|| !strncmp(ptn_list[i],
-						PTN_XBL_CFG,
-						strlen(PTN_XBL_CFG))))
+		//XBL is handled differrently for ufs devices so ignore it
+		if (is_ufs && !strncmp(ptn_list[i], PTN_XBL, strlen(PTN_XBL)))
 				continue;
 		//The partition list will be the list of partitions
 		//corresponding to the slot being set active
@@ -589,11 +582,7 @@ int set_active_boot_slot(struct boot_control_module *module, unsigned slot)
 	for (map_iter = ptn_map.begin(); map_iter != ptn_map.end(); map_iter++){
 		if (map_iter->second.size() < 1)
 			continue;
-		if (boot_ctl_set_active_slot_for_partitions(map_iter->second,
-					slot)) {
-			ALOGE("%s: Failed to set active slot", __func__);
-			goto error;
-		}
+		boot_ctl_set_active_slot_for_partitions(map_iter->second, slot);
 	}
 	if (is_ufs) {
 		if (!strncmp(slot_suffix_arr[slot], AB_SLOT_A_SUFFIX,
