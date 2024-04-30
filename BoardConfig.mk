@@ -152,13 +152,6 @@ TARGET_FS_CONFIG_GEN := \
     $(DEVICE_PATH)/config.fs \
     $(DEVICE_PATH)/mot_aids.fs
 
-# GPS
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
-GNSS_HIDL_VERSION := 2.1
-LOC_HIDL_VERSION := 4.0
-TARGET_NO_RPC := true
-USE_DEVICE_SPECIFIC_GPS := true
-
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/framework_compatibility_matrix.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
