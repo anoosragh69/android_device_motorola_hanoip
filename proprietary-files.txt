@@ -352,47 +352,17 @@ vendor/etc/init/hw/init.mmi.charge_only.rc
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 vendor/etc/charger_fstab.qti
 
-# Display
--system_ext/lib/libsdm-disp-apis.qti.so
--system_ext/lib64/libsdm-disp-apis.qti.so
-vendor/bin/qdcmss
-vendor/etc/init/qdcmss.rc
-vendor/lib/libdisplayqos.so
-vendor/lib/libhdcp1prov.so
-vendor/lib/libhdcp2p2prov.so
-vendor/lib/libsdedrm.so
-vendor/lib/libsdm-colormgr-algo.so
--vendor/lib/libsdm-disp-vndapis.so
-vendor/lib/libsdmextension.so
-vendor/lib/unnhal-acc-hta.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libhdcp1prov.so
-vendor/lib64/libhdcp2p2prov.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdm-colormgr-algo.so
--vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/unnhal-acc-adreno.so
-vendor/lib64/unnhal-acc-common.so
-vendor/lib64/unnhal-acc-hta.so
-vendor/lib64/unnhal-acc-hvx.so
-
-# Display postprocessing
-system_ext/lib64/vendor.display.color@1.0.so
-system_ext/lib64/vendor.display.color@1.1.so
-system_ext/lib64/vendor.display.color@1.2.so
-system_ext/lib64/vendor.display.color@1.3.so
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib64/libdisp-aba.so
-vendor/lib64/libmm-hdcpmgr.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.color@1.3.so
-vendor/lib64/vendor.display.color@1.4.so
-vendor/lib64/vendor.display.color@1.5.so
-vendor/lib64/vendor.display.postproc@1.0.so
+# Display - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
+vendor/lib64/libdisplayqos.so|5548732c916e629f18f45ce257ce843b679a136a
+vendor/lib64/libhdr_tm.so|a222a7d838735c5ce73f06d4096fea3ca19611c8
+vendor/lib64/libqseed3.so|7f2a659fb9acd84d79c11dbd6901b816d5d1214f
+vendor/lib64/libsdedrm.so|351f4f9a64566097bd19601f18951ac8131a92b5
+vendor/lib64/libsdm-color.so|d24904d36d2cd5912755af5ac7e2fede47cd3eac
+vendor/lib64/libsdm-colormgr-algo.so|15f696a4575868e528360896f1e0098d531899c0
+vendor/lib64/libsdm-diag.so|341907510d377127adb98d07e7d9f30448d08def
+vendor/lib64/libsdm-disp-vndapis.so|60da199073d2b0881bf075190a644b332503f39c
+vendor/lib64/libsdmextension.so|76ef1430f700480509b5f991e031447fea9ddb01
+vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 
 # Display (Calibration Data)
 vendor/etc/qdcm_calib_data_mipi_mot_vid_tm_ili7807s_fhd_678.xml
@@ -554,14 +524,9 @@ vendor/lib/libadreno_utils.so
 vendor/lib/libc2d30_bltlib.so
 vendor/lib/libgpudataproducer.so
 vendor/lib/libgsl.so
-vendor/lib/libhdr_tm.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
 vendor/lib/libpvr.so
-vendor/lib/libqseed3.so
-vendor/lib/libsdm-color.so
-vendor/lib/libsdm-diag.so
-vendor/lib/libtinyxml2_1.so
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
@@ -577,14 +542,9 @@ vendor/lib64/libadreno_app_profiles.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libgpudataproducer.so
 vendor/lib64/libgsl.so
-vendor/lib64/libhdr_tm.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 vendor/lib64/libpvr.so
-vendor/lib64/libqseed3.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-diag.so
-vendor/lib64/libtinyxml2_1.so
 
 # IPA (Firmware)
 vendor/firmware/ipa_fws.b00
