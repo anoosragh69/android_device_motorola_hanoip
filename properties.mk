@@ -185,8 +185,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.vulkan=adreno \
-    ro.hardware.egl=adreno \
     vendor.display.disable_excl_rect_partial_fb=1 \
     vendor.display.enable_posted_start_dyn=1 \
     vendor.display.use_smooth_motion=1 \
@@ -213,7 +211,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.sf.native_mode=1 \
     persist.sys.sf.force_brightness_capability=1 \
     debug.sf.disable_client_composition_cache=1 \
-    ro.opengles.version=196610 \
     ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30
 
 PRODUCT_PROPERTY_OVERRIDES += \
