@@ -304,6 +304,10 @@ TARGET_USES_KERNEL_PLATFORM := false
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.hanoip
 
+# Logger
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/persistentLogging.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/persistentLogging.rc
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
