@@ -472,10 +472,6 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     libsensorndkbridge
 
-# Servicetracker
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.servicetracker@1.2.vendor
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
 	$(LOCAL_PATH)

@@ -1327,12 +1327,6 @@ vendor/etc/sensors/proto/sns_ultra_violet.proto
 vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto
 vendor/etc/sensors/sns_reg_config
 
-# Servicetracker
-vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
-vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
--vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
-vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
-
 # Snapdragon Computer Vision Engine
 vendor/lib/libfastcvdsp_stub.so
 -vendor/lib/libfastcvopt.so
