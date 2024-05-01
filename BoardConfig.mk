@@ -21,6 +21,7 @@ BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 BOARD_VENDOR := motorola
 
 DEVICE_PATH := device/motorola/hanoip
+KERNEL_PATH := $(DEVICE_PATH)-kernel
 
 # Architecture
 TARGET_ARCH := arm64
@@ -66,13 +67,8 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/motorola/hanoip
-TARGET_KERNEL_CONFIG := \
-    vendor/sdmsteppe-perf_defconfig \
-    vendor/ext_config/moto-sdmsteppe.config \
-    vendor/ext_config/moto-sdmmagpie-hanoip.config \
-    vendor/debugfs.config \
-    vendor/ext_config/hanoip-moto-sdmsteppe.config
+BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtbs
+BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
 
 # Kernel modules
 TARGET_MODULE_ALIASES := \
