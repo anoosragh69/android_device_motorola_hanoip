@@ -162,11 +162,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.volume.metadata.method=dm-default-key \
     ro.crypto.volume.options=::v2
 
-# Configure hwui renderer and renderengine backend
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.hwui.use_vulkan=true \
-    debug.renderengine.backend=skiaglthreaded
-
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat64.enabled=true \
