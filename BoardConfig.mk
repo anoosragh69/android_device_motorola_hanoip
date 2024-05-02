@@ -59,7 +59,8 @@ BOARD_KERNEL_CMDLINE := \
     earlycon=msm_geni_serial,0x880000 \
     loop.max_part=7 \
     printk.devkmsg=on \
-    firmware_class.path=/vendor/firmware_mnt/image 
+    firmware_class.path=/vendor/firmware_mnt/image \
+    androidboot.selinux=permissive
 
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
