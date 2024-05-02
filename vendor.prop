@@ -1,3 +1,6 @@
 # Camera
 vendor.camera.aux.packagelist=com.motorola.camera2,com.motorola.camera3,org.lineageos.aperture
 persist.vendor.camera.privapp.list=org.lineageos.aperture
+
+# GFX
+ro.config.avoid_gfx_accel=true
