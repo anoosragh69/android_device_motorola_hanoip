@@ -146,6 +146,9 @@ HWUI_COMPILE_FOR_PERF := true
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_hanoip
 TARGET_RECOVERY_DEVICE_MODULES := init_hanoip
 
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
 # Media
 TARGET_DISABLED_UBWC := true
 

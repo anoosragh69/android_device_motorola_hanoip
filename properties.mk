@@ -133,8 +133,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.expose.aux=1 \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.motorola.camera2,com.motorola.camera3,com.motorola.motocit \
-    vendor.camera.aux.packagelist2=com.motorola.ccc,com.android.settings \
     persist.vendor.camera.physical.num=5
 
 # Charger

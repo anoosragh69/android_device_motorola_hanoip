@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "ApertureOverlayHanoip",
+    product_specific: true
+}
