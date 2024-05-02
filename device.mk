@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+KERNEL_PATH := $(LOCAL_PATH)-kernel
+
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -351,6 +353,9 @@ PRODUCT_COPY_FILES += \
 
 # Kernel Headers
 PRODUCT_VENDOR_KERNEL_HEADERS := $(KERNEL_PATH)/kernel-headers
+
+# Vendor Modules
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/modules/*.ko)
 
 # Lights
 PRODUCT_PACKAGES += \
