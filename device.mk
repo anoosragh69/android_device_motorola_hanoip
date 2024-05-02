@@ -352,9 +352,6 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_COPY_FILES += \
     $(KERNEL_PATH)/Image:kernel
 
-# Kernel Headers
-PRODUCT_VENDOR_KERNEL_HEADERS := $(KERNEL_PATH)/kernel-headers
-
 # Vendor Modules
 BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/modules/*.ko)
 
