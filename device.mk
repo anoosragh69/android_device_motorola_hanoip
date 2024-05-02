@@ -184,12 +184,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
     android.frameworks.displayservice@1.0.vendor
 
-
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so
-
-# Google Camera
-$(call inherit-product, vendor/gcam/gcam-vendor.mk)
 
 # ConfigStore
 PRODUCT_PACKAGES += \
