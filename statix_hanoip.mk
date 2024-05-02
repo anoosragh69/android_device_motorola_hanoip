@@ -25,6 +25,8 @@ $(call inherit-product, device/motorola/hanoip/device.mk)
 $(call inherit-product, vendor/statix/config/common.mk)
 $(call inherit-product, vendor/statix/config/gsm.mk)
 
+ENABLE_GAMETOOLS := true
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := statix_hanoip
 PRODUCT_DEVICE := hanoip
