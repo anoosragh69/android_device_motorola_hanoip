@@ -1407,8 +1407,11 @@ vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
-# Touchscreen (Firmware)
+# Touchscreen firmware
 vendor/firmware/FW_ILITEK_TDDI_TM.bin
+
+# Touchscreen firmware (recovery)
+vendor/firmware/FW_ILITEK_TDDI_TM.bin:recovery/root/vendor/firmware/FW_ILITEK_TDDI_TM.bin
 
 # WiFi
 vendor/bin/cnss-daemon
