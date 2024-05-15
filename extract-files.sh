@@ -62,6 +62,15 @@ function blob_fixup() {
     system_ext/etc/permissions/moto-telephony.xml)
         sed -i "s|system|system/system_ext|" "${2}"
         ;;
+    vendor/lib64/camera/components/com.qti.node.gpu.so)
+        sed -i "s/camera.mot.is.coming.cts/vendor.camera.coming.cts/g" "${2}"
+        ;;
+    vendor/lib64/hw/camera.qcom.so)
+        sed -i "s/camera.mot.is.coming.cts/vendor.camera.coming.cts/g" "${2}"
+        ;;
+    vendor/lib64/hw/com.qti.chi.override.so)
+        sed -i "s/camera.mot.is.coming.cts/vendor.camera.coming.cts/g" "${2}"
+        ;;
     vendor/bin/thermal-engine)
         sed -i 's/ro.mot.build.customerid/vendor.build.customerid/g' "${2}"
         ;;
