@@ -222,6 +222,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qcom.hdr.config=/system/vendor/etc/hdr_tm_config.xml
 
+# HWUI
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.hwui.use_hint_manager=true \
+    debug.hwui.target_cpu_time_percent=30
+
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
