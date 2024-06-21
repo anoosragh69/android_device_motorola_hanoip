@@ -11,10 +11,6 @@ LOCAL_PRIVILEGED_MODULE := true
 LOCAL_PRIVATE_PLATFORM_APIS := true
 LOCAL_USE_AAPT2 := true
 
-LOCAL_OPTIONAL_USES_LIBRARIES := \
-    androidx.window.extensions \
-    androidx.window.sidecar
-
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.core_core \
     android-support-v13 \
