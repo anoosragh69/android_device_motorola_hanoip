@@ -308,7 +308,8 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0.vendor \
     libhidltransport \
-    libhwbinder
+    libhwbinder \
+    libutils.vendor
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
@@ -478,6 +479,8 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0 \
     libprotobuf-cpp-full \
     librmnetctl \
+    libsqlite.vendor \
+    libsysutils.vendor \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor \
     libxml2
@@ -490,7 +493,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
     android.hardware.secure_element@1.1.vendor \
-    android.hardware.secure_element@1.0.vendor
+    android.hardware.secure_element@1.0.vendor \
+    libnetutils.vendor
 
 # Vendor libstdc++
 PRODUCT_PACKAGES += \
