@@ -480,6 +480,7 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0 \
     libprotobuf-cpp-full \
     librmnetctl \
+    libsqlite.vendor \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor \
     libxml2
@@ -492,7 +493,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
     android.hardware.secure_element@1.1.vendor \
-    android.hardware.secure_element@1.0.vendor
+    android.hardware.secure_element@1.0.vendor \
+    libnetutils.vendor
 
 # Vendor libstdc++
 PRODUCT_PACKAGES += \
