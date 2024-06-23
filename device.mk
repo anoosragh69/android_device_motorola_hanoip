@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019-2020 The LineageOS Project
+# Copyright (C) 2019-2024 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -407,6 +407,10 @@ PRODUCT_ODM_PROPERTIES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qmi_fw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/qmi_fw.conf
+
+# RFS MSM MPSS symlinks
+PRODUCT_PACKAGES += \
+    rfs_msm_mpss_readonly_vendor_fsg_symlink
 
 # RIL
 PRODUCT_PACKAGES += \
