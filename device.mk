@@ -72,10 +72,6 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
-# OEM
-PRODUCT_PACKAGES += \
-    bin_expat_symlink
-
 # Properties
 -include $(LOCAL_PATH)/properties.mk
 
