@@ -10,8 +10,6 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 
 LOCAL_PACKAGE_NAME := CarrierConfigResHanoip
 
-LOCAL_SDK_VERSION := current
-
 LOCAL_AAPT_FLAGS := --keep-raw-values
 
 include $(BUILD_RRO_PACKAGE)
