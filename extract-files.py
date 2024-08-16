@@ -29,6 +29,7 @@ lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
         'vendor.qti.hardware.fm@1.0',
+        'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,
 }
 
