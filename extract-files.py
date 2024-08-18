@@ -25,12 +25,21 @@ namespace_imports = [
     'vendor/qcom/opensource/display',
 ]
 
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}-vendor' if partition in 'vendor' else None
+
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
         'vendor.qti.hardware.fm@1.0',
         'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,
+    (
+        'libOmxCore',
+        'libqsap_sdk',
+        'libril',
+        'libwpa_client',
+    ): lib_fixup_remove,
 }
 
 blob_fixups: blob_fixups_user_type = {
