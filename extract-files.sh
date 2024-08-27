@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2020 The LineageOS Project
+# SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+# SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -39,10 +39,11 @@ while [ "${#}" -gt 0 ]; do
                 KANG="--kang"
                 ;;
         -s | --section )
-                SECTION="${2}"; shift
+                SECTION="${2}"
+                shift
                 CLEAN_VENDOR=false
                 ;;
-        * )
+         *)
                 SRC="${1}"
                 ;;
     esac
@@ -57,30 +58,45 @@ function blob_fixup() {
     case "${1}" in
     # Fix xml version
     product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml | product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
+	[ "$2" = "" ] && return 0
         sed -i 's/xml version="2.0"/xml version="1.0"/' "${2}"
         ;;
     system_ext/etc/permissions/moto-telephony.xml)
+        [ "$2" = "" ] && return 0
         sed -i "s|system|system/system_ext|" "${2}"
         ;;
     vendor/lib64/camera/components/com.qti.node.gpu.so)
+        [ "$2" = "" ] && return 0
         sed -i "s/camera.mot.is.coming.cts/vendor.camera.coming.cts/g" "${2}"
         ;;
     vendor/lib64/hw/camera.qcom.so)
+        [ "$2" = "" ] && return 0
         sed -i "s/camera.mot.is.coming.cts/vendor.camera.coming.cts/g" "${2}"
         ;;
     vendor/lib64/hw/com.qti.chi.override.so)
+        [ "$2" = "" ] && return 0
         sed -i "s/camera.mot.is.coming.cts/vendor.camera.coming.cts/g" "${2}"
         ;;
     vendor/bin/thermal-engine)
+        [ "$2" = "" ] && return 0
         sed -i 's/ro.mot.build.customerid/vendor.build.customerid/g' "${2}"
         ;;
     vendor/bin/rmt_storage)
+        [ "$2" = "" ] && return 0
         sed -i 's/ro.mot.build.customerid/vendor.build.customerid/g' "${2}"
         ;;
     vendor/lib64/libril-qc-hal-qmi.so)
+        [ "$2" = "" ] && return 0
         sed -i 's/ro.mot.build.customerid/vendor.build.customerid/g' "${2}"
         ;;
-    esac
+     *)
+        return 1
+        ;;
+   esac
+   return 0
+}
+function blob_fixup_dry() {
+    blob_fixup "$1" ""
 }
 
 # Reinitialize the helper for device
