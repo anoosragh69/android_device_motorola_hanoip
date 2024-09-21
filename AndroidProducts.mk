@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_hanoip.mk
+    $(LOCAL_DIR)/styx_hanoip.mk
