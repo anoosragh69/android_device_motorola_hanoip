@@ -39,7 +39,7 @@ constexpr std::string_view kPowerHalInitProp("vendor.powerhal.init");
 
 int main() {
     // Parse config but do not start the looper
-    std::shared_ptr<HintManager> hm = HintManager::GetInstance();
+    std::shared_ptr<HintManager> hm = std::shared_ptr<HintManager>(HintManager::GetInstance());
     if (!hm) {
         LOG(FATAL) << "HintManager Init failed";
     }
