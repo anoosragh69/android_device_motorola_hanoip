@@ -1,4 +1,5 @@
 # Camera
+persist.vendor.camera.privapp.list  u:object_r:vendor_persist_camera_prop:s0
 vendor.camera.coming.cts   u:object_r:vendor_camera_prop:s0
 
 # Radio
