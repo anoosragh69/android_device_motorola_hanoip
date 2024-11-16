@@ -137,6 +137,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.camera.aux.packagelist2=com.motorola.ccc,com.android.settings \
     persist.vendor.camera.physical.num=5
 
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.vendor.camera.privapp.list=org.lineageos.aperture,com.motorola.camera3
+    vendor.camera.aux.packagelist=org.lineageos.aperture,com.motorola.camera3
+
 # Charger
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.charger.enable_suspend=true

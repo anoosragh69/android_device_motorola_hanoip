@@ -20,6 +20,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/motorola/hanoip/hanoip-vendor.mk)
+$(call inherit-product, vendor/motorola/hanoip-motcamera/hanoip-motcamera-vendor.mk)
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -227,6 +228,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     libhwbinder.vendor
+
+# Dex-pre-opt exclusions
+$(call add-product-dex-preopt-module-config,MotoSignatureApp,disable)
 
 # Display
 PRODUCT_PACKAGES += \
