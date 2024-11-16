@@ -9,6 +9,10 @@ r_dir_file(hal_camera_default, mnt_vendor_file)
 
 # Camera props
 set_prop(hal_camera_default, vendor_camera_prop)
+allow hal_camera_default vendor_imager_data_file:dir rw_dir_perms;
+allow hal_camera_default vendor_imager_data_file:file rw_file_perms;
+allow hal_camera_default vendor_imager_metadata_file:dir rw_dir_perms;
+allow hal_camera_default vendor_imager_metadata_file:file rw_file_perms;
 
 # VL53L1
 allow hal_camera_default vl53l1_device:chr_file rw_file_perms;

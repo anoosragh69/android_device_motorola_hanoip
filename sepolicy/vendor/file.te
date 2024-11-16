@@ -33,3 +33,7 @@ type vendor_sysfs_capsense, sysfs_type, fs_type;
 # NFC
 type nxpese_hwservice, hwservice_manager_type;
 type nxpnfc_hwservice, hwservice_manager_type;
+
+# Imager
+type vendor_imager_data_file, file_type, data_file_type;
+type vendor_imager_metadata_file, file_type, data_file_type;
