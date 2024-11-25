@@ -1,6 +1,12 @@
 ## All proprietary files from this list, unless pinned and noted otherwise, are
 ## from hanoip (S2RI32.32-20-9-9-2).
 
+# Current blobs with ELF checks disabled:
+# imsdatadaemon, libcne, libwqe, lowi-server, mutualex depend on libwpa_client, which is a gnu makefile target
+# libmdmcutback depends on libqsap_sdk, which is a gnu makefile target
+# libmotext_inf, libril-qcril-hook-oem depend on libril, which is a gnu makefile target
+# libOmxVpp depends on libOmxCore, which is a gnu makefile target
+
 # ACDB
 vendor/etc/acdbdata/Bluetooth_cal.acdb
 vendor/etc/acdbdata/Codec_cal.acdb
@@ -258,7 +264,6 @@ system_ext/lib/vendor.qti.hardware.data.dynamicdds@1.0.so
 system_ext/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/app/CneApp/CneApp.apk
 vendor/bin/cnd
-# mutualex depends on libwpa_client, which is a gnu makefile target
 vendor/bin/mutualex;DISABLE_CHECKELF
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
@@ -290,13 +295,11 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
 vendor/etc/cne/mwqem.conf
 vendor/etc/cne/profileMwqem.xml
 vendor/etc/init/cnd.rc
-# libcne depends on libwpa_client, which is a gnu makefile target
 vendor/lib/libcne.so;DISABLE_CHECKELF
 vendor/lib/libcneapiclient.so
 vendor/lib/libcneoplookup.so
 vendor/lib/libcneqmiutils.so
 vendor/lib/libwms.so
-# libwqe depends on libwpa_client, which is a gnu makefile target
 vendor/lib/libwqe.so;DISABLE_CHECKELF
 vendor/lib/libxml.so
 vendor/lib/vendor.qti.data.factory@2.0.so
@@ -314,14 +317,12 @@ vendor/lib/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/lib/vendor.qti.hardware.data.qmi@1.0.so
 vendor/lib/vendor.qti.hardware.data.iwlan@1.0.so
 vendor/lib/vendor.qti.hardware.slmadapter@1.0.so
-# libcne depends on libwpa_client, which is a gnu makefile target
 vendor/lib64/libcne.so;DISABLE_CHECKELF
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libwms.so
-# libwqe depends on libwpa_client, which is a gnu makefile target
 vendor/lib64/libwqe.so;DISABLE_CHECKELF
 vendor/lib64/libxml.so
 vendor/lib64/vendor.qti.data.factory@2.0.so
@@ -478,9 +479,9 @@ system_ext/lib64/libfm-hci.so
 system_ext/lib64/vendor.qti.hardware.fm@1.0.so
 vendor/bin/fm_qsoc_patches
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib/vendor.qti.hardware.fm@1.0.so;MODULE=vendor.qti.hardware.fm@1.0-vendor
+vendor/lib/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=-vendor
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE=vendor.qti.hardware.fm@1.0-vendor
+vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=-vendor
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -491,7 +492,6 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 # GPS
 vendor/bin/garden_app
 vendor/bin/loc_launcher
-# lowi-server depends on libwpa_client, which is a gnu makefile target
 vendor/bin/lowi-server;DISABLE_CHECKELF
 vendor/bin/mlid
 vendor/bin/xtra-daemon
@@ -658,7 +658,6 @@ vendor/lib/libOmxDsdDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxG711Dec.so
 vendor/lib/libOmxQcelp13Dec.so
-# libOmxVpp depends on libOmxCore, which is a gnu makefile target
 vendor/lib/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libdsd2pcm.so
@@ -686,7 +685,6 @@ vendor/lib64/libOmxG711Dec.so
 vendor/lib64/libOmxQcelp13Dec.so
 vendor/lib64/libOmxSwVdec.so
 vendor/lib64/libOmxSwVencMpeg4.so
-# libOmxVpp depends on libOmxCore, which is a gnu makefile target
 vendor/lib64/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libmm-color-convertor.so
@@ -914,10 +912,8 @@ vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/liblog_vendor.so
 vendor/lib64/liblqe.so
-# libmdmcutback depends on libqsap_sdk, which is a gnu makefile target
 vendor/lib64/libmdmcutback.so;DISABLE_CHECKELF
 vendor/lib64/libmdmdetect.so
-# libmotext_inf depends on libril, which is a gnu makefile target
 vendor/lib64/libmotext_inf.so;DISABLE_CHECKELF
 vendor/lib64/libnetmgr.so
 vendor/lib64/libnetmgr_common.so
@@ -940,7 +936,6 @@ vendor/lib64/libril-qc-hal-qmi.so
 vendor/lib64/libril-qc-logger.so
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-radioconfig.so
-# libril-qcril-hook-oem depends on libril, which is a gnu makefile target
 vendor/lib64/libril-qcril-hook-oem.so;DISABLE_CHECKELF
 vendor/lib64/librilqmiservices.so
 vendor/lib64/libsettings.so
@@ -1096,7 +1091,6 @@ system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 vendor/bin/ims_rtp_daemon
-# imsdatadaemon depends on libwpa_client, which is a gnu makefile target
 vendor/bin/imsdatadaemon;DISABLE_CHECKELF
 vendor/bin/imsqmidaemon
 vendor/bin/imsrcsd
@@ -1138,7 +1132,7 @@ vendor/lib/vendor.qti.ims.rcsconfig@1.0.so
 vendor/lib/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib/vendor.qti.ims.rcsconfig@2.1.so
-vendor/lib/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0-vendor
+vendor/lib/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=-vendor
 vendor/lib/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
 vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so
@@ -1180,7 +1174,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0-vendor
+vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=-vendor
 
 # Sensors
 vendor/bin/capsense_reset
