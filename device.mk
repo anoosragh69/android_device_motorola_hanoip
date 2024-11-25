@@ -146,6 +146,9 @@ PRODUCT_PACKAGES += \
     tinymix \
     libtinycompress
 
+PRODUCT_PACKAGES += \
+    liba2dpoffload
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/configs/audio/audio_ext_spkr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_ext_spkr.conf \
@@ -170,24 +173,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    liba2dpoffload \
-    com.dsi.ant@1.0.vendor \
-    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor \
-    android.hardware.bluetooth@1.0.vendor
-
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     libcamera2ndk_vendor \
-    libxml2 \
     vendor.qti.hardware.camera.device@1.0.vendor \
-    vendor.qti.hardware.camera.postproc@1.0.vendor \
     android.frameworks.displayservice@1.0.vendor
 
 # ConfigStore
@@ -220,22 +212,10 @@ PRODUCT_PACKAGES += \
     init.qcom.sdio.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
-    init.qti.fm.sh \
     init.qti.ims.sh \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc
-
-# Crypto
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor \
-    android.hardware.keymaster@4.1.vendor \
-    android.hardware.keymaster@4.0.vendor
-
-# Dependencies
-PRODUCT_PACKAGES += \
-    libavservices_minijail.vendor \
-    libhwbinder.vendor
 
 # Display
 PRODUCT_PACKAGES += \
@@ -244,27 +224,12 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     gralloc.qcom \
     hwcomposer.qcom \
-    libdisplayconfig.qti \
-    libqdMetaData \
-    libqdMetaData.system \
-    libtinyxml \
-    libvulkan \
-    vendor.display.config@1.15.vendor \
     vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.mapper@1.1.vendor \
-    vendor.qti.hardware.display.mapper@2.0.vendor \
-    vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor \
     vendor.qti.hardware.memtrack-service
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.3.vendor \
-    android.hardware.drm@1.2.vendor \
-    android.hardware.drm@1.1.vendor \
-    android.hardware.drm@1.0.vendor \
-    libcrypto_shim.vendor
+    android.hardware.drm-service.clearkey
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -274,7 +239,7 @@ PRODUCT_PACKAGES += \
 # Fstab
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
-    
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
@@ -310,12 +275,6 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0.vendor \
-    android.hidl.manager@1.0 \
-    android.hidl.manager@1.0.vendor \
-    libhidltransport \
-    libhwbinder \
     libutils.vendor
 
 # HotwordEnrollement app permissions
@@ -375,11 +334,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml
 
-# Misc
-PRODUCT_PACKAGES += \
-    libchrome \
-    libchrome.vendor
-
 # Moto hardware
 PRODUCT_PACKAGES += \
     MotoActions \
@@ -388,13 +342,6 @@ PRODUCT_PACKAGES += \
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
-
-# NeuralNetworks
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor \
-    android.hardware.neuralnetworks@1.2.vendor \
-    android.hardware.neuralnetworks@1.1.vendor \
-    android.hardware.neuralnetworks@1.0.vendor
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -445,9 +392,7 @@ PRODUCT_PACKAGES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson \
-    libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor
+    libvndfwk_detect_jni.qti.vendor # Needed by CNE app
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.va_aosp.support=1
@@ -464,26 +409,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.2 \
-    android.hardware.radio.config@1.0 \
-    android.hardware.secure_element@1.0 \
-    libprotobuf-cpp-full \
-    librmnetctl \
-    libsqlite.vendor \
-    libsysutils.vendor \
-    libvndfwk_detect_jni.qti \
-    libvndfwk_detect_jni.qti.vendor \
-    libxml2
-
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio@1.4.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.2.vendor \
-    android.hardware.secure_element@1.1.vendor \
-    android.hardware.secure_element@1.0.vendor \
+    libqsap_sdk \
     libnetutils.vendor
 
 # Vendor libstdc++
@@ -504,14 +430,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service.multihal \
-    android.frameworks.sensorservice@1.0 \
-    android.frameworks.sensorservice@1.0.vendor \
-    libsensorndkbridge
-
-# Servicetracker
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.servicetracker@1.2.vendor
+    android.hardware.sensors@2.0-service.multihal
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
