@@ -307,10 +307,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.vendor.qti.sys.fw.bg_apps_limit=60
 
-# Qualcomm System Daemon
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.qcomsysd.enabled=1
-
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.vendorprefix=/vendor \
