@@ -273,12 +273,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     media.stagefright.thumbnail.prefer_hw_codecs=true
 
-# Memory optimizations
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.vendor.qti.sys.fw.bservice_age=5000 \
-    ro.vendor.qti.sys.fw.bservice_enable=true \
-    ro.vendor.qti.sys.fw.bservice_limit=8
-
 # Netflix
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.netflix.bsp_rev=Q6150-17263-1
@@ -303,9 +297,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.vendor.qti.sys.fw.bg_apps_limit=60
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
