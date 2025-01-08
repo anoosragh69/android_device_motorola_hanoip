@@ -260,8 +260,6 @@ system_ext/framework/vendor.qti.data.factory-V1.0-java.jar
 system_ext/framework/vendor.qti.data.factory-V2.0-java.jar
 system_ext/framework/vendor.qti.data.factory-V2.1-java.jar
 system_ext/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar
-system_ext/lib/vendor.qti.hardware.data.dynamicdds@1.0.so
-system_ext/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/app/CneApp/CneApp.apk
 vendor/bin/cnd
 vendor/bin/mutualex;DISABLE_CHECKELF
@@ -386,10 +384,6 @@ vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
 # Display postprocessing
-system_ext/lib64/vendor.display.color@1.0.so
-system_ext/lib64/vendor.display.color@1.1.so
-system_ext/lib64/vendor.display.color@1.2.so
-system_ext/lib64/vendor.display.color@1.3.so
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/lib64/libdisp-aba.so
@@ -613,8 +607,6 @@ vendor/lib64/libqtikeymaster4.so
 # Latency
 system_ext/framework/vendor.qti.hardware.data.latency-V1.0-java.jar
 system_ext/framework/vendor.qti.latency-V2.0-java.jar
-system_ext/lib/vendor.qti.hardware.data.latency@1.0.so
-system_ext/lib64/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib/vendor.qti.hardware.data.latency@1.0.so
 
 # Listen
@@ -637,12 +629,8 @@ vendor/lib64/liblistensoundmodel2.so
 vendor/lib64/libmulawdec.so
 
 # Media
-system_ext/lib/libmmosal.so
 system_ext/lib/libmmparser_lite.so
-system_ext/lib/vendor.qti.hardware.vpp@1.1.so
-system_ext/lib64/libmmosal.so
 system_ext/lib64/libmmparser_lite.so
-system_ext/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/init/vppservice.rc
@@ -795,39 +783,6 @@ system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/framework/embmslibrary.jar
 system_ext/framework/qcrilhook.jar
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-system_ext/lib/vendor.qti.hardware.radio.am@1.0.so
-system_ext/lib/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so
-system_ext/lib/vendor.qti.hardware.radio.lpa@1.0.so
-system_ext/lib/vendor.qti.hardware.radio.qcrilhook@1.0.so
-system_ext/lib/vendor.qti.hardware.radio.qtiradio@1.0.so
-system_ext/lib/vendor.qti.hardware.radio.qtiradio@2.0.so
-system_ext/lib/vendor.qti.hardware.radio.qtiradio@2.1.so
-system_ext/lib/vendor.qti.hardware.radio.qtiradio@2.2.so
-system_ext/lib/vendor.qti.hardware.radio.qtiradio@2.3.so
-system_ext/lib/vendor.qti.hardware.radio.qtiradio@2.4.so
-system_ext/lib/vendor.qti.hardware.radio.uim@1.0.so
-system_ext/lib/vendor.qti.hardware.radio.uim@1.1.so
-system_ext/lib/vendor.qti.hardware.radio.uim@1.2.so
-system_ext/lib/vendor.qti.hardware.radio.uim_remote_client@1.0.so
-system_ext/lib/vendor.qti.hardware.radio.uim_remote_client@1.1.so
-system_ext/lib/vendor.qti.hardware.radio.uim_remote_client@1.2.so
-system_ext/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so
-system_ext/lib64/vendor.qti.hardware.radio.am@1.0.so
-system_ext/lib64/vendor.qti.hardware.radio.lpa@1.0.so
-system_ext/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so
-system_ext/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so
-system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so
-system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.1.so
-system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so
-system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so
-system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so
-system_ext/lib64/vendor.qti.hardware.radio.uim@1.0.so
-system_ext/lib64/vendor.qti.hardware.radio.uim@1.1.so
-system_ext/lib64/vendor.qti.hardware.radio.uim@1.2.so
-system_ext/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
-system_ext/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
-system_ext/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
-system_ext/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/adpl
 vendor/bin/diag_mdlog
@@ -1027,14 +982,6 @@ system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
-system_ext/lib/com.qualcomm.qti.imscmservice@1.0.so
-system_ext/lib/com.qualcomm.qti.imscmservice@2.0.so
-system_ext/lib/com.qualcomm.qti.imscmservice@2.1.so
-system_ext/lib/com.qualcomm.qti.imscmservice@2.2.so
-system_ext/lib/com.qualcomm.qti.uceservice@2.0.so
-system_ext/lib/com.qualcomm.qti.uceservice@2.1.so
-system_ext/lib/com.qualcomm.qti.uceservice@2.2.so
-system_ext/lib/com.qualcomm.qti.uceservice@2.3.so
 system_ext/lib/lib-imsvideocodec.so
 system_ext/lib/lib-imsvt.so
 system_ext/lib/lib-imsvtextutils.so
@@ -1044,29 +991,7 @@ system_ext/lib/libimscamera_jni.so
 system_ext/lib/libimsmedia_jni.so
 system_ext/lib/libmmrtpdecoder.so
 system_ext/lib/libmmrtpencoder.so
-system_ext/lib/vendor.qti.hardware.radio.ims@1.0.so
-system_ext/lib/vendor.qti.hardware.radio.ims@1.1.so
-system_ext/lib/vendor.qti.hardware.radio.ims@1.2.so
-system_ext/lib/vendor.qti.hardware.radio.ims@1.3.so
-system_ext/lib/vendor.qti.hardware.radio.ims@1.4.so
-system_ext/lib/vendor.qti.hardware.radio.ims@1.5.so
-system_ext/lib/vendor.qti.hardware.radio.ims@1.6.so
-system_ext/lib/vendor.qti.hardware.radio.ims@1.7.so
-system_ext/lib/vendor.qti.ims.callcapability@1.0.so
-system_ext/lib/vendor.qti.ims.callinfo@1.0.so
-system_ext/lib/vendor.qti.ims.rcsconfig@1.0.so
-system_ext/lib/vendor.qti.ims.rcsconfig@1.1.so
-system_ext/lib/vendor.qti.ims.rcsconfig@2.0.so
-system_ext/lib/vendor.qti.ims.rcsconfig@2.1.so
 system_ext/lib/vendor.qti.imsrtpservice@3.0.so
-system_ext/lib64/com.qualcomm.qti.imscmservice@1.0.so
-system_ext/lib64/com.qualcomm.qti.imscmservice@2.0.so
-system_ext/lib64/com.qualcomm.qti.imscmservice@2.1.so
-system_ext/lib64/com.qualcomm.qti.imscmservice@2.2.so
-system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so
-system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so
-system_ext/lib64/com.qualcomm.qti.uceservice@2.2.so
-system_ext/lib64/com.qualcomm.qti.uceservice@2.3.so
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
@@ -1075,20 +1000,6 @@ system_ext/lib64/libdiag_system.so
 system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
-system_ext/lib64/vendor.qti.hardware.radio.ims@1.0.so
-system_ext/lib64/vendor.qti.hardware.radio.ims@1.1.so
-system_ext/lib64/vendor.qti.hardware.radio.ims@1.2.so
-system_ext/lib64/vendor.qti.hardware.radio.ims@1.3.so
-system_ext/lib64/vendor.qti.hardware.radio.ims@1.4.so
-system_ext/lib64/vendor.qti.hardware.radio.ims@1.5.so
-system_ext/lib64/vendor.qti.hardware.radio.ims@1.6.so
-system_ext/lib64/vendor.qti.hardware.radio.ims@1.7.so
-system_ext/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so
-system_ext/lib64/vendor.qti.ims.callinfo@1.0.so
-system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so
-system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so
-system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so
-system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon;DISABLE_CHECKELF
