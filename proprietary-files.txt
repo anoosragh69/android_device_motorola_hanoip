@@ -311,9 +311,13 @@ vendor/lib/vendor.qti.hardware.data.cne.internal.constants@1.0.so
 vendor/lib/vendor.qti.hardware.data.cne.internal.server@1.0.so
 vendor/lib/vendor.qti.hardware.data.connection@1.0.so
 vendor/lib/vendor.qti.hardware.data.connection@1.1.so
+vendor/lib/vendor.qti.hardware.data.lce@1.0.so
 vendor/lib/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/lib/vendor.qti.hardware.data.qmi@1.0.so
 vendor/lib/vendor.qti.hardware.data.iwlan@1.0.so
+vendor/lib/vendor.qti.hardware.mwqemadapter@1.0.so
+vendor/lib/vendor.qti.latency@2.0.so
+vendor/lib/vendor.qti.latency@2.1.so
 vendor/lib/vendor.qti.hardware.slmadapter@1.0.so
 vendor/lib64/libcne.so;DISABLE_CHECKELF
 vendor/lib64/libcneapiclient.so
@@ -359,8 +363,6 @@ vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 vendor/etc/charger_fstab.qti
 
 # Display
-system_ext/lib/libsdm-disp-apis.qti.so
-system_ext/lib64/libsdm-disp-apis.qti.so
 vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
 vendor/lib/libdisplayqos.so
@@ -473,15 +475,12 @@ system_ext/lib64/fm_helium.so
 system_ext/lib64/libfm-hci.so
 system_ext/lib64/vendor.qti.hardware.fm@1.0.so
 vendor/bin/fm_qsoc_patches
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=-vendor
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=-vendor
+vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # GPS
@@ -618,7 +617,6 @@ vendor/lib/libgcs-calwrapper.so
 vendor/lib/libgcs-ipc.so
 vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
-vendor/lib/libjnihelper.so
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 vendor/lib64/libgcs-calwrapper.so
@@ -630,7 +628,9 @@ vendor/lib64/liblistensoundmodel2.so
 vendor/lib64/libmulawdec.so
 
 # Media
+system_ext/lib/libmmosal.so
 system_ext/lib/libmmparser_lite.so
+system_ext/lib64/libmmosal.so
 system_ext/lib64/libmmparser_lite.so
 vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
@@ -650,7 +650,7 @@ vendor/lib/libvpptestutils.so
 vendor/lib/vendor.qti.hardware.vpp@1.1.so
 vendor/lib/vendor.qti.hardware.vpp@1.2.so
 vendor/lib/vendor.qti.hardware.vpp@1.3.so
-vendor/lib64/libmmosal.so
+vendor/lib64/libmmosal.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libstagefright_soft_qtiflacdec.so
 vendor/lib64/libvppclient.so
 vendor/lib64/libvpphvx.so
@@ -804,7 +804,6 @@ vendor/lib/libqcmaputils.so
 vendor/lib/libqcrilFramework.so
 vendor/lib/libqrtr.so
 vendor/lib/libqsocket.so
-vendor/lib/libril-qc-hal-qmi.so
 vendor/lib/libril-qc-logger.so
 vendor/lib/libril-qc-ltedirectdisc.so
 vendor/lib/libril-qc-radioconfig.so
@@ -858,7 +857,6 @@ vendor/lib64/libqdma_file_agent.so
 vendor/lib64/libqmi_csvt_srvc.so
 vendor/lib64/libqmimotext.so
 vendor/lib64/libqrtr.so
-vendor/lib64/libqsap_sdk.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libril-qc-hal-qmi.so
 vendor/lib64/libril-qc-logger.so
@@ -964,6 +962,7 @@ system_ext/lib/libimscamera_jni.so
 system_ext/lib/libimsmedia_jni.so
 system_ext/lib/libmmrtpdecoder.so
 system_ext/lib/libmmrtpencoder.so
+system_ext/lib/vendor.qti.diaghal@1.0.so
 system_ext/lib/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
@@ -1016,7 +1015,7 @@ vendor/lib/vendor.qti.ims.rcsconfig@1.0.so
 vendor/lib/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib/vendor.qti.ims.rcsconfig@2.1.so
-vendor/lib/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=-vendor
+vendor/lib/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 vendor/lib/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
 vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so
@@ -1058,7 +1057,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=-vendor
+vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 
 # Sensors
 vendor/bin/capsense_reset
@@ -1258,6 +1257,7 @@ vendor/etc/thermal-engine-hanoip.conf
 vendor/app/TimeService/TimeService.apk;PRESIGNED
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
+vendor/lib/libtime_genoff.so
 vendor/lib64/libtime_genoff.so
 
 # Touchscreen firmware
