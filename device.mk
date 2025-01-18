@@ -192,6 +192,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.class_main.sh \
     init.crda.sh \
+    init.hanoip.rc \
     init.mmi.chipset.rc \
     init.mmi.rc \
     init.mmi.laser.sh \
