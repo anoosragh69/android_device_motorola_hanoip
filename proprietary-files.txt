@@ -925,7 +925,7 @@ vendor/radio/qcril_database/upgrade/8_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/9_version_qcrildb.sql
 
 # Radio - IMS (APK)
-system_ext/priv-app/ims/ims.apk|e48ddd5a44c66db54cac7718f0030fc5e13d4b4a
+system_ext/priv-app/ims/ims.apk|e9c94334635124dbd73bfa321166152b3b0e43f8
 
 # Radio - Moto Telephony Framework
 system/etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
