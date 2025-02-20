@@ -9,3 +9,6 @@ set_prop(vendor_init, vendor_fm_prop)
 allow vendor_init { proc_dirty proc proc_sched_lib_mask_cpuinfo }:file rw_file_perms;
 allow vendor_init self:perf_event cpu;
 allow vendor_init system_file:file getattr;
+allow vendor_init proc_sched:file { write };
+allow vendor_init proc_dirty:file { write };
+get_prop(vendor_init, default_prop)
